@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Айдос Орынбасар</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Айдос Орынбасар</h1>
+        </header>
+        
+        <nav>
+            <button id="open-gallery">Айдос & Орынбасар Той фотолары</button>
+        </nav>
+
+        <div id="gallery" class="gallery">
+            <h2>Фотолар</h2>
+            <div class="gallery-images">
+                <!-- Фото будут загружаться сюда -->
+            </div>
+        </div>
+
+        <!-- Модальное окно для просмотра фото на весь экран -->
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+                <div class="lightbox-controls">
+                    <button id="download-btn" class="lightbox-btn">Скачать</button>
+                    <button id="share-btn" class="lightbox-btn">Поделиться</button>
+                    <button id="close-lightbox" class="lightbox-btn">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

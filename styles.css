@@ -1,0 +1,153 @@
+/* Общие стили для страницы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f7f7; /* Нежный пастельный фон */
+    color: #444;
+}
+
+/* Контейнер для содержимого */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Заголовок сайта */
+header h1 {
+    text-align: center;
+    color: #6c5b7b; /* Нежно-фиолетовый */
+    font-size: 48px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-family: 'Cursive', sans-serif;
+}
+
+/* Навигация и кнопка */
+nav {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#open-gallery {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #6c5b7b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#open-gallery:hover {
+    background-color: #c4a7b4;
+    transform: scale(1.05); /* Плавное увеличение кнопки при наведении */
+}
+
+/* Галерея */
+.gallery {
+    display: none;
+    margin-top: 20px;
+}
+
+.gallery h2 {
+    text-align: center;
+    color: #6c5b7b;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-family: 'Cursive', sans-serif;
+}
+
+/* Сетки для фото */
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px 0;
+}
+
+/* Стили для фотографий */
+.gallery-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-images img:hover {
+    transform: scale(1.05); /* Плавное увеличение фото при наведении */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Легкая тень для фото */
+}
+
+/* Модальное окно для просмотра фото на весь экран */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    position: relative;
+    text-align: center;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    border: 5px solid #fff; /* Белая рамка вокруг изображения */
+}
+
+.lightbox-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.lightbox-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #6c5b7b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.lightbox-btn:hover {
+    background-color: #c4a7b4;
+    transform: scale(1.05);
+}
+
+#close-lightbox {
+    background-color: #e74c3c; /* Красная кнопка закрытия */
+}
+
+#close-lightbox:hover {
+    background-color: #f39c12; /* Оранжевая кнопка при наведении */
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.lightbox {
+    animation: fadeIn 0.5s ease-in;
+}
